@@ -15,31 +15,16 @@
 
 
 
-<meta name="description" content="```public void callPhone(View view){
-    //注意拨打电话需要权限：&amp;lt;uses-permission android:name=&amp;quot;android.permission.CALL_PHONE&amp;quot;/&amp;gt;
-
-        //写法一：
-
-        Intent intent=new Intent(Intent.ACTION_CA">
+<meta name="description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354public void callPhone(View view)&amp;#123;        //注意拨打电话需要权限：&amp;lt;uses-permission android:name=&quot;android.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Intent的使用">
 <meta property="og:url" content="http://blog.guiguzp.win/2017/01/05/Intent的使用/index.html">
 <meta property="og:site_name" content="忠平">
-<meta property="og:description" content="```public void callPhone(View view){
-    //注意拨打电话需要权限：&amp;lt;uses-permission android:name=&amp;quot;android.permission.CALL_PHONE&amp;quot;/&amp;gt;
-
-        //写法一：
-
-        Intent intent=new Intent(Intent.ACTION_CA">
-<meta property="og:updated_time" content="2017-02-08T12:14:40.860Z">
+<meta property="og:description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354public void callPhone(View view)&amp;#123;        //注意拨打电话需要权限：&amp;lt;uses-permission android:name=&quot;android.">
+<meta property="og:updated_time" content="2017-02-08T12:18:07.111Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Intent的使用">
-<meta name="twitter:description" content="```public void callPhone(View view){
-    //注意拨打电话需要权限：&amp;lt;uses-permission android:name=&amp;quot;android.permission.CALL_PHONE&amp;quot;/&amp;gt;
-
-        //写法一：
-
-        Intent intent=new Intent(Intent.ACTION_CA">
+<meta name="twitter:description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354public void callPhone(View view)&amp;#123;        //注意拨打电话需要权限：&amp;lt;uses-permission android:name=&quot;android.">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -335,60 +320,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>```<br>public void callPhone(View view){</p>
-<pre><code>    //注意拨打电话需要权限：&lt;uses-permission android:name=&quot;android.permission.CALL_PHONE&quot;/&gt;
-
-        //写法一：
-
-        Intent intent=new Intent(Intent.ACTION_CALL, Uri.parse(&quot;tel:1101&quot;));
-
-        startActivity(intent);
-
-//        写法二:
-
-//        Intent intent=new Intent();
-
-//        intent.setAction(Intent.ACTION_CALL);//隐式意图跳转
-
-//        intent.setData(Uri.parse(&quot;tel:990&quot;));
-
-//        startActivity(intent);
-
-    }
-
-    public void to(View view){
-
-        //本应用中跳转
-
-//        写法一：
-
-        Intent intent=new Intent(MainActivity.this,secondActivity.class);//显示意图跳转
-
-        startActivity(intent);
-
-        //写法二：
-
-//        Intent intent=new Intent();
-
-//        intent.setClass(this,secondActivity.class);
-
-//        startActivity(intent);
-
-    }
-
-    //显示意图跳转到其他的应用
-
-    public void toBrowser(View view){
-
-        Intent intent=new Intent();
-
-        //目标应用的包名和类名
-
-        intent.setClassName(&quot;com.android.browser&quot;,&quot;com.android.browser.BrowserActivity&quot;);
-
-        startActivity(intent);
-</code></pre><p>}</p>
-
+        <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div></pre></td><td class="code"><pre><div class="line">public void callPhone(View view)&#123;</div><div class="line"></div><div class="line">        //注意拨打电话需要权限：&lt;uses-permission android:name=<span class="string">"android.permission.CALL_PHONE"</span>/&gt;</div><div class="line"></div><div class="line">            //写法一：</div><div class="line"></div><div class="line">            Intent intent=new Intent(Intent.ACTION_CALL, Uri.parse(<span class="string">"tel:1101"</span>));</div><div class="line"></div><div class="line">            startActivity(intent);</div><div class="line"></div><div class="line">    //        写法二:</div><div class="line"></div><div class="line">    //        Intent intent=new Intent();</div><div class="line"></div><div class="line">    //        intent.setAction(Intent.ACTION_CALL);//隐式意图跳转</div><div class="line"></div><div class="line">    //        intent.setData(Uri.parse(<span class="string">"tel:990"</span>));</div><div class="line"></div><div class="line">    //        startActivity(intent);</div><div class="line"></div><div class="line">        &#125;</div><div class="line"></div><div class="line">        public void to(View view)&#123;</div><div class="line"></div><div class="line">            //本应用中跳转</div><div class="line"></div><div class="line">    //        写法一：</div><div class="line"></div><div class="line">            Intent intent=new Intent(MainActivity.this,secondActivity.class);//显示意图跳转</div><div class="line"></div><div class="line">            startActivity(intent);</div><div class="line"></div><div class="line">            //写法二：</div><div class="line"></div><div class="line">    //        Intent intent=new Intent();</div><div class="line"></div><div class="line">    //        intent.setClass(this,secondActivity.class);</div><div class="line"></div><div class="line">    //        startActivity(intent);</div><div class="line"></div><div class="line">        &#125;</div><div class="line"></div><div class="line">        //显示意图跳转到其他的应用</div><div class="line"></div><div class="line">        public void toBrowser(View view)&#123;</div><div class="line"></div><div class="line">            Intent intent=new Intent();</div><div class="line"></div><div class="line">            //目标应用的包名和类名</div><div class="line"></div><div class="line">            intent.setClassName(<span class="string">"com.android.browser"</span>,<span class="string">"com.android.browser.BrowserActivity"</span>);</div><div class="line"></div><div class="line">            startActivity(intent);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
     
@@ -399,7 +331,7 @@
         <p><span>本文标题:</span><a href="/2017/01/05/Intent的使用/">Intent的使用</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">忠平</a></p>
         <p><span>发布时间:</span>2017-01-05, 01:37:39</p>
-        <p><span>最后更新:</span>2017-02-08, 20:14:40</p>
+        <p><span>最后更新:</span>2017-02-08, 20:18:07</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/01/05/Intent的使用/" title="Intent的使用">http://blog.guiguzp.win/2017/01/05/Intent的使用/</a>
             <span class="copy-path" data-clipboard-text="原文: http://blog.guiguzp.win/2017/01/05/Intent的使用/　　作者: 忠平" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -416,7 +348,7 @@
         
             <div id="article-nav-newer" class="article-nav-title">
                 <a href="/2017/02/08/Untitled/">
-                    Intent的几种写法
+                    测试
                 </a>
             </div>
         
@@ -547,7 +479,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/02/08/Untitled/" title="上一篇: Intent的几种写法">
+            <a href="/2017/02/08/Untitled/" title="上一篇: 测试">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -561,7 +493,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/02/08/Untitled/">Intent的几种写法</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/05/Intent的使用/">Intent的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/17/Intent的几种写法/">Intent的几种写法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/17/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/02/08/Untitled/">测试</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/05/Intent的使用/">Intent的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/17/Intent的几种写法/">Intent的几种写法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/17/hello-world/">Hello World</a></li></ul>
 
 
 
