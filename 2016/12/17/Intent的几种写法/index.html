@@ -15,37 +15,34 @@
 
 
 
-<meta name="description" content="##Intent的几种写法：
- public void callPhone(View view){
+<meta name="description" content="public void callPhone(View view){
 
     //注意拨打电话需要权限：&amp;lt;uses-permission android:name=&amp;quot;android.permission.CALL_PHONE&amp;quot;/&amp;gt;
 
         //写法一：
 
-        Intent intent=new Intent(In">
+        Intent intent=new Intent(Intent.ACTION_CAL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Intent的几种写法">
 <meta property="og:url" content="http://yoursite.com/2016/12/17/Intent的几种写法/index.html">
 <meta property="og:site_name" content="忠平">
-<meta property="og:description" content="##Intent的几种写法：
- public void callPhone(View view){
+<meta property="og:description" content="public void callPhone(View view){
 
     //注意拨打电话需要权限：&amp;lt;uses-permission android:name=&amp;quot;android.permission.CALL_PHONE&amp;quot;/&amp;gt;
 
         //写法一：
 
-        Intent intent=new Intent(In">
-<meta property="og:updated_time" content="2017-02-08T06:06:21.556Z">
+        Intent intent=new Intent(Intent.ACTION_CAL">
+<meta property="og:updated_time" content="2017-02-08T06:22:39.781Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Intent的几种写法">
-<meta name="twitter:description" content="##Intent的几种写法：
- public void callPhone(View view){
+<meta name="twitter:description" content="public void callPhone(View view){
 
     //注意拨打电话需要权限：&amp;lt;uses-permission android:name=&amp;quot;android.permission.CALL_PHONE&amp;quot;/&amp;gt;
 
         //写法一：
 
-        Intent intent=new Intent(In">
+        Intent intent=new Intent(Intent.ACTION_CAL">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -93,7 +90,7 @@
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: undefined
+        search: true
     }
 </script>
 
@@ -127,6 +124,13 @@
         <p class="header-subtitle">迈入代码的新世界，为了成为独当一面的 Android工程师！</p>
         
 
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
         
 
 
@@ -326,8 +330,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>##Intent的几种写法：</p>
-<pre><code> public void callPhone(View view){
+        <pre><code> public void callPhone(View view){
 
     //注意拨打电话需要权限：&lt;uses-permission android:name=&quot;android.permission.CALL_PHONE&quot;/&gt;
 
@@ -393,7 +396,7 @@
         <p><span>本文标题:</span><a href="/2016/12/17/Intent的几种写法/">Intent的几种写法</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">忠平</a></p>
         <p><span>发布时间:</span>2016-12-17, 10:38:32</p>
-        <p><span>最后更新:</span>2017-02-08, 14:06:21</p>
+        <p><span>最后更新:</span>2017-02-08, 14:22:39</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/12/17/Intent的几种写法/" title="Intent的几种写法">http://yoursite.com/2016/12/17/Intent的几种写法/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/12/17/Intent的几种写法/　　作者: 忠平" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -410,7 +413,7 @@
         
             <div id="article-nav-newer" class="article-nav-title">
                 <a href="/2017/01/05/Intent的使用/">
-                    
+                    Intent的几种写法
                 </a>
             </div>
         
@@ -541,7 +544,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/01/05/Intent的使用/" title="上一篇: ">
+            <a href="/2017/01/05/Intent的使用/" title="上一篇: Intent的几种写法">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -555,7 +558,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/01/05/Intent的使用/">Intent的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/17/Intent的几种写法/">Intent的几种写法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/17/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/01/05/Intent的使用/">Intent的几种写法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/17/Intent的几种写法/">Intent的几种写法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/17/hello-world/">Hello World</a></li></ul>
 
 
 

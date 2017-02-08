@@ -15,37 +15,31 @@
 
 
 
-<meta name="description" content="title:Intent的几种写法：
-
- public void callPhone(View view){
+<meta name="description" content="public void callPhone(View view){
     //注意拨打电话需要权限：&amp;lt;uses-permission android:name=&amp;quot;android.permission.CALL_PHONE&amp;quot;/&amp;gt;
 
         //写法一：
 
-        Intent intent=new Inte">
+        Intent intent=new Intent(Intent.ACTION_CALL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="忠平">
+<meta property="og:title" content="Intent的几种写法">
 <meta property="og:url" content="http://yoursite.com/2017/01/05/Intent的使用/index.html">
 <meta property="og:site_name" content="忠平">
-<meta property="og:description" content="title:Intent的几种写法：
-
- public void callPhone(View view){
+<meta property="og:description" content="public void callPhone(View view){
     //注意拨打电话需要权限：&amp;lt;uses-permission android:name=&amp;quot;android.permission.CALL_PHONE&amp;quot;/&amp;gt;
 
         //写法一：
 
-        Intent intent=new Inte">
-<meta property="og:updated_time" content="2017-01-04T17:37:19.973Z">
+        Intent intent=new Intent(Intent.ACTION_CALL">
+<meta property="og:updated_time" content="2017-02-08T06:23:38.536Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="忠平">
-<meta name="twitter:description" content="title:Intent的几种写法：
-
- public void callPhone(View view){
+<meta name="twitter:title" content="Intent的几种写法">
+<meta name="twitter:description" content="public void callPhone(View view){
     //注意拨打电话需要权限：&amp;lt;uses-permission android:name=&amp;quot;android.permission.CALL_PHONE&amp;quot;/&amp;gt;
 
         //写法一：
 
-        Intent intent=new Inte">
+        Intent intent=new Intent(Intent.ACTION_CALL">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -77,7 +71,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>忠平</title>
+<title>Intent的几种写法 | 忠平</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -93,7 +87,7 @@
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: undefined
+        search: true
     }
 </script>
 
@@ -127,6 +121,13 @@
         <p class="header-subtitle">迈入代码的新世界，为了成为独当一面的 Android工程师！</p>
         
 
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
         
 
 
@@ -305,13 +306,28 @@
       <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Intent的几种写法
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
           
-        <hr>
-<p>title:Intent的几种写法：</p>
-<hr>
-<p> public void callPhone(View view){</p>
+        <p> public void callPhone(View view){</p>
 <pre><code>    //注意拨打电话需要权限：&lt;uses-permission android:name=&quot;android.permission.CALL_PHONE&quot;/&gt;
 
         //写法一：
@@ -373,12 +389,12 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/01/05/Intent的使用/"></a></p>
+        <p><span>本文标题:</span><a href="/2017/01/05/Intent的使用/">Intent的几种写法</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">忠平</a></p>
         <p><span>发布时间:</span>2017-01-05, 01:37:39</p>
-        <p><span>最后更新:</span>2017-01-05, 01:37:19</p>
+        <p><span>最后更新:</span>2017-02-08, 14:23:38</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/01/05/Intent的使用/" title="">http://yoursite.com/2017/01/05/Intent的使用/</a>
+            <span>原始链接:</span><a class="post-url" href="/2017/01/05/Intent的使用/" title="Intent的几种写法">http://yoursite.com/2017/01/05/Intent的使用/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/01/05/Intent的使用/　　作者: 忠平" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -442,7 +458,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"　| 忠平　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"Intent的几种写法　| 忠平　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -458,7 +474,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2017/01/05/Intent的使用/" data-title="" data-url="http://yoursite.com/2017/01/05/Intent的使用/"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2017/01/05/Intent的使用/" data-title="Intent的几种写法" data-url="http://yoursite.com/2017/01/05/Intent的使用/"></div>
     <script>
         var duoshuoQuery = {short_name:"zach"};
         var loadComment = function(){
@@ -530,7 +546,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/01/05/Intent的使用/">Intent的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/17/Intent的几种写法/">Intent的几种写法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/17/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/01/05/Intent的使用/">Intent的几种写法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/17/Intent的几种写法/">Intent的几种写法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/17/hello-world/">Hello World</a></li></ul>
 
 
 

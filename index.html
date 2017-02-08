@@ -73,7 +73,7 @@
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: undefined
+        search: true
     }
 </script>
 
@@ -107,6 +107,13 @@
         <p class="header-subtitle">迈入代码的新世界，为了成为独当一面的 Android工程师！</p>
         
 
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
         
 
 
@@ -287,13 +294,21 @@
       <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/01/05/Intent的使用/">Intent的几种写法</a>
+    </h1>
+  
+
+      </header>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
           
-        <hr>
-<p>title:Intent的几种写法：</p>
-<hr>
-<p> public void callPhone(View view){</p>
+        <p> public void callPhone(View view){</p>
 <pre><code>    //注意拨打电话需要权限：&lt;uses-permission android:name=&quot;android.permission.CALL_PHONE&quot;/&gt;
 
         //写法一：
@@ -411,8 +426,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>##Intent的几种写法：</p>
-<pre><code> public void callPhone(View view){
+        <pre><code> public void callPhone(View view){
 
     //注意拨打电话需要权限：&lt;uses-permission android:name=&quot;android.permission.CALL_PHONE&quot;/&gt;
 
