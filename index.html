@@ -270,6 +270,15 @@
       <time datetime="2017-01-04T17:37:39.947Z" itemprop="datePublished">2017-01-05</time>
 </a>
 
+ 
+    <a href="/2017/01/05/Intent的使用/#comments" title="查看评论">
+        <i class="fa fa-comments-o" aria-hidden="true"></i>
+        <span class="count-comment"></span>
+        
+            <span class="ds-thread-count"  data-thread-key="2017/01/05/Intent的使用/" ></span>
+        
+        
+    </a>
 
     </div>
   
@@ -371,6 +380,15 @@
       <time datetime="2016-12-17T02:38:32.661Z" itemprop="datePublished">2016-12-17</time>
 </a>
 
+ 
+    <a href="/2016/12/17/Intent的几种写法/#comments" title="查看评论">
+        <i class="fa fa-comments-o" aria-hidden="true"></i>
+        <span class="count-comment"></span>
+        
+            <span class="ds-thread-count"  data-thread-key="2016/12/17/Intent的几种写法/" ></span>
+        
+        
+    </a>
 
     </div>
   
@@ -471,6 +489,15 @@
       <time datetime="2016-12-17T01:27:58.875Z" itemprop="datePublished">2016-12-17</time>
 </a>
 
+ 
+    <a href="/2016/12/17/hello-world/#comments" title="查看评论">
+        <i class="fa fa-comments-o" aria-hidden="true"></i>
+        <span class="count-comment"></span>
+        
+            <span class="ds-thread-count"  data-thread-key="2016/12/17/hello-world/" ></span>
+        
+        
+    </a>
 
     </div>
   
@@ -582,6 +609,31 @@
         })
     </script>
 
+
+    
+        <script>
+            if ($(".left-col").is(":visible")) {
+                var duoshuoQuery = {short_name:"zach"};
+                (function() {
+                    var d = document, s = d.createElement('script');
+                    s.src = 'http://static.duoshuo.com/embed.js';
+                    s.async = true; s.charset = 'UTF-8';
+                    (d.head || d.body).appendChild(s);
+                })();
+
+                $(document).ready(function(){
+                    var $duoshuoCount = $(".ds-thread-count");
+                    $duoshuoCount.bind("DOMNodeInserted", function(e) {
+                        var num = $(this).text().replace(/[^0-9]/ig,"");
+                        $(this).siblings(".count-comment").text(num);
+                        $(this).remove();
+                    })
+                })
+            }
+        </script>
+    
+
+     
 
 
 
