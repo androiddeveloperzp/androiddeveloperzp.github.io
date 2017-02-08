@@ -13,61 +13,60 @@
     <entry>
       <title><![CDATA[Intent的使用]]></title>
       <url>http://blog.guiguzp.win/2017/01/05/Intent%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
-      <content type="html"><![CDATA[<pre><code>public void callPhone(View view){
+      <content type="html"><![CDATA[<p>```<br>public void callPhone(View view){</p>
+<pre><code>    //注意拨打电话需要权限：&lt;uses-permission android:name=&quot;android.permission.CALL_PHONE&quot;/&gt;
 
-        //注意拨打电话需要权限：&lt;uses-permission android:name=&quot;android.permission.CALL_PHONE&quot;/&gt;
+        //写法一：
 
-            //写法一：
+        Intent intent=new Intent(Intent.ACTION_CALL, Uri.parse(&quot;tel:1101&quot;));
 
-            Intent intent=new Intent(Intent.ACTION_CALL, Uri.parse(&quot;tel:1101&quot;));
+        startActivity(intent);
 
-            startActivity(intent);
+//        写法二:
 
-    //        写法二:
+//        Intent intent=new Intent();
 
-    //        Intent intent=new Intent();
+//        intent.setAction(Intent.ACTION_CALL);//隐式意图跳转
 
-    //        intent.setAction(Intent.ACTION_CALL);//隐式意图跳转
+//        intent.setData(Uri.parse(&quot;tel:990&quot;));
 
-    //        intent.setData(Uri.parse(&quot;tel:990&quot;));
+//        startActivity(intent);
 
-    //        startActivity(intent);
+    }
 
-        }
+    public void to(View view){
 
-        public void to(View view){
+        //本应用中跳转
 
-            //本应用中跳转
+//        写法一：
 
-    //        写法一：
+        Intent intent=new Intent(MainActivity.this,secondActivity.class);//显示意图跳转
 
-            Intent intent=new Intent(MainActivity.this,secondActivity.class);//显示意图跳转
+        startActivity(intent);
 
-            startActivity(intent);
+        //写法二：
 
-            //写法二：
+//        Intent intent=new Intent();
 
-    //        Intent intent=new Intent();
+//        intent.setClass(this,secondActivity.class);
 
-    //        intent.setClass(this,secondActivity.class);
+//        startActivity(intent);
 
-    //        startActivity(intent);
+    }
 
-        }
+    //显示意图跳转到其他的应用
 
-        //显示意图跳转到其他的应用
+    public void toBrowser(View view){
 
-        public void toBrowser(View view){
+        Intent intent=new Intent();
 
-            Intent intent=new Intent();
+        //目标应用的包名和类名
 
-            //目标应用的包名和类名
+        intent.setClassName(&quot;com.android.browser&quot;,&quot;com.android.browser.BrowserActivity&quot;);
 
-            intent.setClassName(&quot;com.android.browser&quot;,&quot;com.android.browser.BrowserActivity&quot;);
-
-            startActivity(intent);
-}
-</code></pre>]]></content>
+        startActivity(intent);
+</code></pre><p>}</p>
+]]></content>
     </entry>
     
     <entry>
