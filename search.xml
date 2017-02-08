@@ -4,6 +4,40 @@
   
     
     <entry>
+      <title></title>
+      <url>http://blog.guiguzp.win/2017/02/08/%E6%96%B0%E6%96%87%E6%A1%A3/</url>
+      <content type="html"><![CDATA[<pre><code>public void callPhone(View view){
+        //注意拨打电话需要权限：&lt;uses-permission android:name=&quot;android.permission.CALL_PHONE&quot;/&gt;
+            //写法一：
+            Intent intent=new Intent(Intent.ACTION_CALL, Uri.parse(&quot;tel:1101&quot;));
+            startActivity(intent);
+    //        写法二:
+    //        Intent intent=new Intent();
+    //        intent.setAction(Intent.ACTION_CALL);//隐式意图跳转
+    //        intent.setData(Uri.parse(&quot;tel:990&quot;));
+    //        startActivity(intent);
+        }
+        public void to(View view){
+            //本应用中跳转
+    //        写法一：
+            Intent intent=new Intent(MainActivity.this,secondActivity.class);//显示意图跳转
+            startActivity(intent);
+            //写法二：
+    //        Intent intent=new Intent();
+    //        intent.setClass(this,secondActivity.class);
+    //        startActivity(intent);
+        }
+        //显示意图跳转到其他的应用
+        public void toBrowser(View view){
+            Intent intent=new Intent();
+            //目标应用的包名和类名
+            intent.setClassName(&quot;com.android.browser&quot;,&quot;com.android.browser.BrowserActivity&quot;);
+            startActivity(intent);
+}
+</code></pre>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[测试]]></title>
       <url>http://blog.guiguzp.win/2017/02/08/Untitled/</url>
       <content type="html"><![CDATA[<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div></pre></td><td class="code"><pre><div class="line">package com.zp.myplayer.bean;</div><div class="line">import android.os.Parcel;</div><div class="line">import android.os.Parcelable;</div><div class="line">/**</div><div class="line"> * @autor 忠平</div><div class="line"> * @time 2017/1/10 20:09</div><div class="line"> */</div><div class="line">public class Course implements Parcelable &#123;</div><div class="line">    @Override</div><div class="line">    public String toString() &#123;</div><div class="line">        return &quot;Course&#123;&quot; +</div><div class="line">                &quot;thumb_url=&apos;&quot; + thumb_url + &apos;\&apos;&apos; +</div><div class="line">                &quot;, courseName=&apos;&quot; + courseName + &apos;\&apos;&apos; +</div><div class="line">                &apos;&#125;&apos;;</div><div class="line">    &#125;</div><div class="line">    /**</div><div class="line">     * section_seq : 1</div><div class="line">     * thumb_url : http://img.mukewang.com/57075a320001c61f06000338-533-300.jpg</div><div class="line">     * sectionName : 功能分析</div><div class="line">     * courseId : 135</div><div class="line">     * file_url : http://v1.mukewang.com/60854807-0cc8-4808-94e5-7d14335ae9a8/M.mp4</div><div class="line">     * chapter_seq : 1</div><div class="line">     * extras : &#123;&quot;courseType&quot;:&quot;2609c0f288ce2f33d161997b5a52150d&quot;,&quot;lastPlayTime&quot;:0&#125;</div><div class="line">     * recvsize : 8691625</div><div class="line">     * filesize : 8691625</div><div class="line">     * sectionId : 2113</div><div class="line">     * downtime : 1479343732569</div><div class="line">     * chapterId : 614</div><div class="line">     * sectionType : 1</div><div class="line">     * courseName : Android的ListView下拉刷新</div><div class="line">     */</div><div class="line">    private String thumb_url;</div><div class="line">    private String courseName;</div><div class="line">    protected Course(Parcel in) &#123;</div><div class="line">        thumb_url = in.readString();</div><div class="line">        courseName = in.readString();</div><div class="line">    &#125;</div><div class="line">    public static final Creator&lt;Course&gt; CREATOR = new Creator&lt;Course&gt;() &#123;</div><div class="line">        @Override</div><div class="line">        public Course createFromParcel(Parcel in) &#123;</div><div class="line">            return new Course(in);</div><div class="line">        &#125;</div><div class="line">        @Override</div><div class="line">        public Course[] newArray(int size) &#123;</div><div class="line">            return new Course[size];</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">    public Course() &#123;</div><div class="line">    &#125;</div><div class="line">    public String getThumb_url() &#123;</div><div class="line">        return thumb_url;</div><div class="line">    &#125;</div><div class="line">    public void setThumb_url(String thumb_url) &#123;</div><div class="line">        this.thumb_url = thumb_url;</div><div class="line">    &#125;</div><div class="line">    public String getCourseName() &#123;</div><div class="line">        return courseName;</div><div class="line">    &#125;</div><div class="line">    public void setCourseName(String courseName) &#123;</div><div class="line">        this.courseName = courseName;</div><div class="line">    &#125;</div><div class="line">    @Override</div><div class="line">    public int describeContents() &#123;</div><div class="line">        return 0;</div><div class="line">    &#125;</div><div class="line">    @Override</div><div class="line">    public void writeToParcel(Parcel dest, int flags) &#123;</div><div class="line">        dest.writeString(thumb_url);</div><div class="line">        dest.writeString(courseName);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
