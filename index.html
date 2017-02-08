@@ -270,6 +270,74 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-Intent的使用" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/01/05/Intent的使用/" class="article-date">
+      <time datetime="2017-01-04T17:37:39.947Z" itemprop="datePublished">2017-01-05</time>
+</a>
+
+ 
+    <a href="/2017/01/05/Intent的使用/#comments" title="查看评论">
+        <i class="fa fa-comments-o" aria-hidden="true"></i>
+        <span class="count-comment"></span>
+        
+            <span class="ds-thread-count"  data-thread-key="2017/01/05/Intent的使用/" ></span>
+        
+        
+    </a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/01/05/Intent的使用/">Intent的使用</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div></pre></td><td class="code"><pre><div class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">callPhone</span><span class="params">(View view)</span></span>&#123;</div><div class="line"></div><div class="line">        <span class="comment">//注意拨打电话需要权限：&lt;uses-permission android:name="android.permission.CALL_PHONE"/&gt;</span></div><div class="line"></div><div class="line">            <span class="comment">//写法一：</span></div><div class="line"></div><div class="line">            Intent intent=<span class="keyword">new</span> Intent(Intent.ACTION_CALL, Uri.parse(<span class="string">"tel:1101"</span>));</div><div class="line"></div><div class="line">            startActivity(intent);</div><div class="line"></div><div class="line">    <span class="comment">//        写法二:</span></div><div class="line"></div><div class="line">    <span class="comment">//        Intent intent=new Intent();</span></div><div class="line"></div><div class="line">    <span class="comment">//        intent.setAction(Intent.ACTION_CALL);//隐式意图跳转</span></div><div class="line"></div><div class="line">    <span class="comment">//        intent.setData(Uri.parse("tel:990"));</span></div><div class="line"></div><div class="line">    <span class="comment">//        startActivity(intent);</span></div><div class="line"></div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">to</span><span class="params">(View view)</span></span>&#123;</div><div class="line"></div><div class="line">            <span class="comment">//本应用中跳转</span></div><div class="line"></div><div class="line">    <span class="comment">//        写法一：</span></div><div class="line"></div><div class="line">            Intent intent=<span class="keyword">new</span> Intent(MainActivity.<span class="keyword">this</span>,secondActivity.<span class="keyword">class</span>);<span class="comment">//显示意图跳转</span></div><div class="line"></div><div class="line">            startActivity(intent);</div><div class="line"></div><div class="line">            <span class="comment">//写法二：</span></div><div class="line"></div><div class="line">    <span class="comment">//        Intent intent=new Intent();</span></div><div class="line"></div><div class="line">    <span class="comment">//        intent.setClass(this,secondActivity.class);</span></div><div class="line"></div><div class="line">    <span class="comment">//        startActivity(intent);</span></div><div class="line"></div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">//显示意图跳转到其他的应用</span></div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">toBrowser</span><span class="params">(View view)</span></span>&#123;</div><div class="line"></div><div class="line">            Intent intent=<span class="keyword">new</span> Intent();</div><div class="line"></div><div class="line">            <span class="comment">//目标应用的包名和类名</span></div><div class="line"></div><div class="line">            intent.setClassName(<span class="string">"com.android.browser"</span>,<span class="string">"com.android.browser.BrowserActivity"</span>);</div><div class="line"></div><div class="line">            startActivity(intent);</div><div class="line"></div><div class="line">        &#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Android/">Android</a>
+    </div>
+
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-Intent的几种写法" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
